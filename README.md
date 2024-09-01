@@ -1,7 +1,7 @@
 # BlockKindleOTA
 Block Kindle OTA firmware updates with this tool.
 
-An alternative to [renametoabin], [Shut The Back Door] and [BinaryRenamer].
+An alternative to [renametoabin], [ShutTheBackDoor] and [BinaryRenamer].
 
 ## How to use
 1. Read the important instructions below.
