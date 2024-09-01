@@ -1,12 +1,22 @@
-## 使用方法
-* 阅读下文的重要说明
-* 克隆项目，将项目文件夹复制到Kindle根目录下的extensions目录中
-* 打开`KUAL`，依次选择`Tools` -> `Block OTA` -> `Block`。设备片刻后会重启
-## 重要说明
-该插件参考的是这个帖子的方法：https://www.mobileread.com/forums/showthread.php?t=327879 ，即通过移除（重命名）升级功能相关二进制文件的方法来阻止升级服务启动。该方法只适用于越狱后的设备。这种方法尝试保证在屏蔽后不会下载新的升级文件，但通过在屏蔽前就已经下载好的升级文件或屏蔽后手动放置的升级文件依然可以升级。而且，为了保证已经启动的升级服务被完全关闭，插件会重启一次设备，而这时**如果存在已经下载好的固件就会进入升级流程**。虽然插件会尝试删除已经下载好的升级文件，但是情况多样，为安全计，请  
-> * **务必保证在点击"Block OTA"前Kindle设置里“更新我的Kindle”按钮是灰色的（即不可点击状态）**
+# BlockKindleOTA
+Block Kindle OTA firmware updates with this tool.
 
-可以连接电脑，检查kindle磁盘根目录下有没有一两百兆的升级文件（名为譬如`updatexxxxxxxx.bin），如果存在，将其删除可以使升级按钮变灰。另外为了使风险最小化，还有如下建议：
-> * 设备成功越狱后先安装hotfix（强烈建议）。这在极端情况下可防止越狱失效
-> * 屏蔽升级前减少连接WiFi的时间。这降低了在完成屏蔽前就下载好了升级文件的可能
-> * 屏蔽升级后一段时间里连接WiFi，并关注“更新我的Kindle”按钮状态（应该是灰色），验证屏蔽有效。此间需防止设备意外重启
+An alternative to [renametoabin], [Shut The Back Door] and [BinaryRenamer].
+
+## How to use
+1. Read the important instructions below.
+2. `git clone` or download the project and copy the project folder to the `/extensions` directory in the Kindle root directory.
+3. Open `KUAL` and select `Tools` -> `Block OTA` -> `Block`. The device will restart after a moment.
+
+## Important Note
+This plugin refers to the method in this post: https://www.mobileread.com/forums/showthread.php?t=327879, which is to prevent the upgrade service from starting by removing (renaming) the binary files related to the upgrade function. This method only works for jailbroken devices. This method attempts to ensure that no new upgrade files are downloaded after blocking, but upgrades can still be made by downloading upgrade files before blocking or manually placing upgrade files after blocking. In addition, in order to ensure that the upgrade service that has been started is completely shut down, the plugin will restart the device once, and at this time **if there is already downloaded firmware, it will enter the upgrade process**. Although the plugin will try to delete the downloaded upgrade files, the situation varies. For safety reasons, please **make sure that the "Update My Kindle" button in the Kindle settings is gray (i.e. unclickable) before clicking "Block OTA"**
+
+You can connect to a computer and check whether there is an upgrade file of one or two hundred megabytes in the Kindle root directory (named, for example, `updatexxxxxxxx.bin). If it exists, deleting it will make the upgrade button gray. In addition, in order to minimize the risk, there are the following suggestions:
+
+> - Install the Jailbreak Hotfix after the device is successfully jailbroken (strongly recommended). This can prevent jailbreaking from failing in extreme cases
+> - Don't stay connected to WiFi for very long before blocking firmware upgrades. This reduces the possibility that an upgrade file is downloaded before the blocking is completed
+> - Connect to WiFi for a period of time after blocking firmware upgrades and pay attention to the status of the "Update My Kindle" button (it should stay gray) to verify that the blocking is effective. During this period, you need to prevent the device from restarting unexpectedly.
+
+[renametoabin]: https://www.mobileread.com/forums/showpost.php?p=4076733&postcount=25 
+[ShutTheBackDoor]: https://www.mobileread.com/forums/showthread.php?t=205666
+[BinaryRenamer]: https://www.mobileread.com/forums/showthread.php?p=4380046
